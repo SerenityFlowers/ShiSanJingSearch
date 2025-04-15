@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>使用説明 | 經典注疏查詢</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary-color: #457c49;
+            --secondary-color: #e6f2ea;
+            --text-color: #333;
+            --background-color: #f8f9fa;
+            --card-background: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: var(--card-background);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            color: var(--primary-color);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem;
+            }
+
+            .container {
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>儒家十三經簡便查詢 - 使用説明</h1>
+
+        <h2>網站內容與來源</h2>
+        <p>本網站收錄了儒家十三經的原文與漢魏古注。</p>
+        <p>所以，可以想見地，《左傳》中的春秋經和左氏傳，都是正文。而《毛詩》的毛傳和鄭箋都是“注文”。其他的也類似。</p>
+        <p>原始文本中出現的圖片字，為方便處理已批量轉譯為符號“▧”。<strong>“▧”並不代表殘損</strong>，只是處理圖片字比較麻煩，所以没有搞。</p>
+        <p>定位正文與古注相對簡單，但標註卷數、頁數、篇名等資料較為繁瑣，尚未完成。作者比較懶，未處理。</p>
+        <p>原始文本的質量是不錯的，但批量轉換仍可能出錯。如需正式引用，請參考原書。</p>
+        <p>推薦查閱的網絡版本為：<a href="https://jingdian.ancientbooks.cn/#/6" target="_blank">中華書局經典古籍庫</a></p>
+
+        <h2>關於異體字查詢</h2>
+        <p>網站支援異體字查詢：將用戶輸入的每個字都在異體字表中做遍歷，最後計算出笛卡爾積進行匹配。</p>
+        <p>此方法在理論上簡單有效，但輸入字數增加時，組合量呈指數級增長，會造成明顯延遲。</p>
+        <p>為控制效能，<strong>目前關聯異體字的查詢組合上限為 5000 條</strong>，換算後約六七個字以內的輸入是可接受的範圍。</p>
+        <p>所用異體字資料由顧國林老師提供，內容包含大量古文楷定字，未必適用於所有查詢場景。但我現在只有這一個表，就先這樣吧。</p>
+
+        <h2>設計初衷</h2>
+        <p>本網站原設計是為了疑難俗字考釋而建立。大量疑難字的出處可追溯至經典文本及其古注，因此提供高品質的經注對照資料是網站的核心目標。</p>
+        <p>若其他朋友認為本網站有用，亦歡迎使用。</p>
+        <p>原書中前序、後序等與疑難字無關的部分已全部刪去。</p>
+
+        <h2>書目來源 📖</h2>
+        <p>本網站所用底本如下，包含多種不同版本。特别注意，《經典釋文》不全，有的有《經典釋文》，有的没有。<strong>命名比較隨意，請內行見諒。</strong></p>
+
+        <table style="width:100%; border-collapse: collapse; margin-top: 1rem;">
+            <thead>
+                <tr style="background-color: var(--secondary-color);">
+                    <th style="border: 1px solid #ccc; padding: 0.5rem;">書名</th>
+                    <th style="border: 1px solid #ccc; padding: 0.5rem;">底本</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="border: 1px solid #ccc; padding: 0.5rem;">《周易注》</td>
+                    <td style="border: 1px solid #ccc; padding: 0.5rem;">《四部叢刊》影印上海商務印書館涵芬樓藏宋刊十卷本</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ccc; padding: 0.5rem;">《尚書正義》</td>
+                    <td style="border: 1px solid #ccc; padding: 0.5rem;">《中華再造善本》影印宋兩浙東路茶鹽司刻本【八行本】</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ccc; padding: 0.5rem;">《毛詩注疏》</td>
+                    <td style="border: 1px solid #ccc; padding: 0.5rem;">藝文印書館 2007 年影印阮元刻本【阮本】</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ccc; padding: 0.5rem;">《周禮疏》</td>
+                    <td style="border: 1px solid #ccc; padding: 0.5rem;">南宋兩浙東路茶鹽司刊本【八行本】</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ccc; padding: 0.5rem;">《儀禮注疏》</td>
+                    <td style="border: 1px solid #ccc; padding: 0.5rem;">北京大學圖書館藏張敦仁本</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ccc; padding: 0.5rem;">《禮記正義》</td>
+                    <td style="border: 1px solid #ccc; padding: 0.5rem;">《中華再造善本》影印南宋兩浙東路茶鹽司刻本【八行本】</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ccc; padding: 0.5rem;">《春秋左傳正義》</td>
+                    <td style="border: 1px solid #ccc; padding: 0.5rem;">《中華再造善本》影印國家圖書館藏慶元本</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ccc; padding: 0.5rem;">《春秋公羊傳注疏》</td>
+                    <td style="border: 1px solid #ccc; padding: 0.5rem;">藝文印書館 2007 年影印阮元刻本【阮本】</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ccc; padding: 0.5rem;">《春秋穀梁傳注疏》</td>
+                    <td style="border: 1px solid #ccc; padding: 0.5rem;">中華書局 1979 年影印原世界書局縮印阮刻本【阮本】</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ccc; padding: 0.5rem;">《孝經注疏》</td>
+                    <td style="border: 1px solid #ccc; padding: 0.5rem;">《中華再造善本》影印中國國家圖書館藏元泰定本</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ccc; padding: 0.5rem;">《論語註疏》</td>
+                    <td style="border: 1px solid #ccc; padding: 0.5rem;">蜀大字本《論語註疏》</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ccc; padding: 0.5rem;">《爾雅注疏》</td>
+                    <td style="border: 1px solid #ccc; padding: 0.5rem;">中華書局 1979 年影印原世界書局縮印阮刻本【阮本】</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ccc; padding: 0.5rem;">《孟子注疏》</td>
+                    <td style="border: 1px solid #ccc; padding: 0.5rem;">台北故宮博物院影印宋刻元明遞修本《孟子注疏解經》【八行本】</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <a class="back-link" href="index.html">← 返回查字頁面</a>
+    </div>
+</body>
+</html>
