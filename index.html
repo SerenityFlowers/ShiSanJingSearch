@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>十三經簡便查詢</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        <h1>十三經簡便查詢</h1>     
+        <div id="instructionLinkContainer">
+            <a href="instruction.html" target="_blank" class="instruction-link">📘 使用説明</a>
+        </div>  
+        <div class="input-group">
+            <input type="text" id="characterInput" placeholder="輸入一個繁體字:" />
+            <select id="variantToggle">
+                <option value="withVariants" selected>查詢異體字</option>
+                <option value="withoutVariants">只查原字</option>
+            </select>
+            <select id="searchMode">
+                <option value="byCharacter" selected>查經文</option>
+                <option value="byDefinition">查古注</option>
+            </select>   
+            <select id="columnSelect">
+                <option value="all">顯示全部</option>
+                <option value="definitionOnly">僅顯示古注</option>
+            </select>
+            <button id="searchButton" onclick="searchCharacter()" disabled>查詢</button>
+        </div>
+        <div class="input-group">
+            <!-- ... existing inputs ... -->
+          </div>
+          <div id="loadingMessage" style="text-align: center; color: #888; margin-top: 10px;">
+            書目正在加載，請不要開始檢索。
+          </div>                
+        <table id="sourceSelectorContainer" class="source-selector-table"></table>
+
+        <div id="filterCheckboxesContainer" class="filter-checkboxes"></div> <!-- 动态生成复选框的容器 -->
+
+        <div id="calledGroups" class="results-section">
+            <!-- 初始隐藏这段文字 -->
+            <p id="descriptionText" style="visibility: hidden;">返回的異體字組：</p>
+            <div id="resultsContainer"></div> <!-- 用于放置查询结果 -->
+        </div>               
+        
+        <div class="results-section">
+            <table id="resultsTable">
+                <thead></thead>
+                <tbody id="resultsBody"></tbody>
+            </table>
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
