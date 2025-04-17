@@ -433,7 +433,7 @@ function renderVariantPopup(inputChar, variantGroups) {
     descriptionText.innerHTML = `
         <div class="variant-link-container">
             <a href="javascript:void(0)" onclick="document.getElementById('variantModal').style.display='block'" class="variant-link">
-                📎 查看異體字組
+                查看異體字組
             </a>
         </div>
         ${modalHtml}
